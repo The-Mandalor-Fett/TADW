@@ -16,16 +16,16 @@
 <link href="" rel="stylesheet">
 
 <!--SCRIPTS -->
-<script src="./jquery-3.6.0.js"></script>
+<script src="./JS/jquery-3.6.0.js"></script>
 <script src="./validetta-1.0.1/dist/validetta.js"></script>
 <script src="./validetta-1.0.1/localization/validettaLang-es-ES.js"></script>
-<script src="./validacion.js"></script>
+<script src="./JS/validacion.js"></script>
 
 </head>
 <body>
     <h1>Bienvenido al Gestor de Trabajos terminales</h1>
     <div class="">
-        <form id="formSesion" action="./checarDatos.php" method="post">
+        <form id="formSesion" action="./PHP/checarDatos.php" method="post">
             <label for="usuario">Usuario/Boleta:</label>
             <input type="text" id="usuario" name="usuario" data-validetta="required,number">
             <br>
@@ -37,6 +37,6 @@
     </div>
     
     <br>
-    <a href="./registrarUsuario.php">Registrarte</a>
+    <a href="./PHP/registrarUsuario.php">Registrarte</a>
 </body>
-</html>
+</html> 
