@@ -24,11 +24,11 @@
 <body>
     <h1>Bienvenido al Gestor de Trabajos terminales</h1>
     <form id="formSesion" action="./checarDatos.php" method="post">
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario">
+        <label for="usuario">Usuario/Boleta:</label>
+        <input type="text" id="usuario" name="usuario" data-validetta="required,number,minLength[8],maxLength[10]"">
         <br>
         <label for="contrasena" id="contrasena" name="contrasena">Contrasena:</label>
-        <input type="password" id="contrasena" name="contrasena">
+        <input type="password" id="contrasena" name="contrasena" data-validetta="required">
         <br>
         <button type="submit">Entrar</button>
     </form>
