@@ -19,19 +19,23 @@
 <script src="./jquery-3.6.0.js"></script>
 <script src="./validetta-1.0.1/dist/validetta.js"></script>
 <script src="./validetta-1.0.1/localization/validettaLang-es-ES.js"></script>
+<script src="./validacion.js"></script>
 
 </head>
 <body>
     <h1>Bienvenido al Gestor de Trabajos terminales</h1>
-    <form id="formSesion" action="./checarDatos.php" method="post">
-        <label for="usuario">Usuario/Boleta:</label>
-        <input type="text" id="usuario" name="usuario" data-validetta="required,number,minLength[8],maxLength[10]">
-        <br>
-        <label for="contrasena" id="contrasena" name="contrasena">Contrasena:</label>
-        <input type="password" id="contrasena" name="contrasena" data-validetta="required">
-        <br>
-        <button type="submit">Entrar</button>
-    </form>
+    <div class="">
+        <form id="formSesion" action="./checarDatos.php" method="post">
+            <label for="usuario">Usuario/Boleta:</label>
+            <input type="text" id="usuario" name="usuario" data-validetta="required,number">
+            <br>
+            <label for="contrasena" id="contrasena" name="contrasena">Contrasena:</label>
+            <input type="password" id="contrasena" name="contrasena" data-validetta="required">
+            <br>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    
     <br>
     <a href="./registrarUsuario.php">Registrarte</a>
 </body>
