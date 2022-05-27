@@ -8,10 +8,30 @@
 <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
 <meta name="description" content="">
 <meta name="keywords" content="">
+
+<!-- LINKS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+<link rel="stylesheet" href="./validetta-1.0.1/dist/validetta.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
 <link href="" rel="stylesheet">
+
+<!--SCRIPTS -->
+<script src="./jquery-3.6.0.js"></script>
+<script src="./validetta-1.0.1/dist/validetta.js"></script>
+<script src="./validetta-1.0.1/localization/validettaLang-es-ES.js"></script>
+
 </head>
 <body>
-    <a href="./iniciarSesion.html">Iniciar Sesión</a>
+    <h1>Bienvenido al Gestor de Trabajos terminales</h1>
+    <form id="formSesion" action="./checarDatos.php" method="post">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario">
+        <br>
+        <label for="contrasena" id="contrasena" name="contrasena">Contrasena:</label>
+        <input type="password" id="contrasena" name="contrasena">
+        <br>
+        <button type="submit">Entrar</button>
+    </form>
     <br>
     <a href="./registrarUsuario.php">Registrarte</a>
 </body>
