@@ -3,9 +3,9 @@ session_start();
 include("./conexion.php");
 $usuario = $_POST["usuario"];
 $contrasena = md5($_POST["contrasena"]);
-$rol = $_POST[1];
 
-$sqlCheckUsr = "SELECT * FROM usuario WHERE id = '$usuario' AND contrasena = '$contrasena' AND id_rol = '$rol'";
+
+$sqlCheckUsr = "SELECT * FROM usuario WHERE id = '$usuario' AND contrasena = '$contrasena' AND id_rol = '1'";
 $sqlCheckADMIN = "SELECT * FROM usuario WHERE id = '$usuario' AND contrasena = '$contrasena' AND id_rol = '0' ";
 $resCheckUsr = mysqli_query($conexion, $sqlCheckUsr);
 $resCheckADMIN = mysqli_query($conexion, $sqlCheckADMIN);
