@@ -11,6 +11,7 @@ $resCheckUsr = mysqli_query($conexion, $sqlCheckUsr);
 $resCheckADMIN = mysqli_query($conexion, $sqlCheckADMIN);
 if(mysqli_num_rows($resCheckUsr) == 1){
     $_SESSION["login"] = true;
+   
     header("location:./proyecto.php");
 }
 elseif(mysqli_num_rows($resCheckADMIN) == 1){
@@ -19,7 +20,7 @@ elseif(mysqli_num_rows($resCheckADMIN) == 1){
     
 }
 else{
-    echo "Tus datos no están registrados. Favor de registrarse.
-    <a href='./proyecto1.html'>Regresar</a>";
+    echo "Tus datos no están registrados. Favor de registrarse.";
+    //<a href='/tadw/proyecto1.html'>Regresar</a>;
     }
 ?>
