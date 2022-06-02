@@ -1,32 +1,24 @@
 $(document).ready(function(){
-    
 
-    $("form#formSesion").validetta({
+    $("form#formRegistro").validetta({
         onValid:(e)=>{
             e.preventDefault();
             $.ajax({
                 method:"post",
-                url:"./PHP/inicioSesion_AX.php",
-                data: $("form#formSesion").serialize(),
+                url:"./PHP/registro_AX.php",
+                data: $("form#formRegistro").serialize(),
                 cache:false,
                 success:(RespuestaServidor_AX)=>{
                     let AX = JSON.parse(RespuestaServidor_AX);
                     let icono;
-                    if(AX.codigo == 0){icono = 'error';}else{icono = 'success';}
+                    if(AX.codigo == 1){icono = 'success';}else{icono = 'error';}
                     if(AX.codigo == 1){
                         Swal.fire({
                             icon: icono,
                             title: 'Datos correctos',
                             text: AX.mensaje
-                          });
+                            });
                         }
-                    else if(AX.codigo == 2){
-                        Swal.fire({
-                            icon: icono,
-                            title: 'Datos correctos',
-                            text: AX.mensaje
-                          });
-                    }
                     else{
                         Swal.fire({
                             icon: icono,
@@ -40,6 +32,4 @@ $(document).ready(function(){
             }); 
         }
     });
-        
 });
-

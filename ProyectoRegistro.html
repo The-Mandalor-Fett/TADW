@@ -26,6 +26,7 @@
 <script src="./JS/validacion.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" ></script>
 <script src="./JS/package/dist/sweetalert2.all.min.js"></script>
+<script src="./JS/validacionRegistro.js"></script>
 
 </head>
 <body>
@@ -34,52 +35,52 @@
 </header>
 <main class="valign-wrapper">
     <div class="container">
-        <h3 class="center-align">Bienvenido al sistema de inicio de sesión de trabajo terminal</h3>
-        <h6 class="center-align">Por favor introduce tu boleta y contraseña</h6>
+        <h3 class="center-align">Bienvenido al sistema de registro de usuario</h3>
+        <h6 class="center-align">Por favor llena los campos requeridos</h6>
         <div class="row">
-            <form class="col s12">
+            <form class="col s12" id="formRegistro">
             <div class="row">
-                <div class="input-field col offset-l3 l6 offset-m3 m6 offset-s2 s8">
+                <div class="input-field col s6">
                     <i class="fas fa-id-card prefix"></i>
                     <label for="usuario">Boleta:</label>
                     <input type="text" id="usuario" name="usuario" data-validetta="required,number">
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s4 ">
+                  </div>
+                  <div class="input-field col s6">
                     <i class="fa fa-user prefix"></i>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre"><br>
-                </div>
-                <div class="input-field col s4">
-                    <i class="fas fa-u prefix"></i>
+                    <input type="text" id="nombre" name="nombre" data-validetta="required">
+                  </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-users prefix"></i>
                     <label for="primerApe">Primer Ape:</label>
-                    <input type="text" id="primerApe" name="primerApe">
+                    <input type="text" id="primerApe" name="primerApe" data-validetta="required">
                 </div>
-                <div class="input-field col s4">
-                    <i class="fas fa-u prefix"></i>
+                <div class="input-field col s6">
+                    <i class="fas fa-users prefix"></i>
                     <label for="segundoApe">Segundo Ape:</label>
-                    <input type="text" id="segundoApe" name="segundoApe">
+                    <input type="text" id="segundoApe" name="segundoApe" >
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s6">
+                    <i class="fas fa-at prefix"></i>
                     <label for="correo">Correo:</label>
-                    <input type="text" id="correo" name="correo">
+                    <input type="email" id="correo" name="correo" data-validetta="required, email">
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s6">
+                    <i class="fas fa-key prefix"></i>
                     <label for="contrasena">Contraseña:</label>
                     <input type="password" name="contrasena" id="contrasena" data-validetta="required,minLength[4],maxLength[8]">
                 </div>
+                <div class="col col offset-l3 l6 offset-m3 m6 offset-s2 s8">
+                    <button class="btn blue darken-4 boton" type="submit">Registrarte</button>
+                </div>
             </div>
+        </form>
             <div class="row">
-                <div class="col offset-l3 l6 offset-m3 m6 offset-s2 s8 ">
+                <div class="col s6 m3 l4">
                     <h6 class="left-align">¿Ya te registraste? <a class="waves-effect waves-teal btn-flat" href="./ProyectoSesion.html">Inicia sesión</a></h6>
                 </div>
             </div>
-            </form>
+   
         </div>
         
     </div>

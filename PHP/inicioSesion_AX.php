@@ -28,7 +28,6 @@ else{
         $respuestaAX["codigo"] = 0;
         $respuestaAX["mensaje"] = "Error. Boleta no resgistrada, por favor regístrate";
     }
-    //<a href='/tadw/proyecto1.html'>Regresar</a>;
     }
 echo json_encode($respuestaAX);
 ?>
