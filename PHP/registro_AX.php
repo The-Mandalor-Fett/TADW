@@ -1,6 +1,6 @@
 <?php
 include("./conexion.php");
-$boleta = $_POST["boleta"];
+$boleta = $_POST["usuario"];
 $nombre = $_POST["nombre"];
 $primerApe = $_POST["primerApe"];
 $segundoApe = $_POST["segundoApe"];
@@ -30,4 +30,5 @@ else{
     $respuesta_AX["mensaje"]= "Error no se pudo realizar el registro";
     }   
 }
+echo json_encode($respuesta_AX);
 ?>
