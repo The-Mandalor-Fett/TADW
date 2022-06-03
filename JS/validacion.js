@@ -17,7 +17,10 @@ $(document).ready(function(){
                         Swal.fire({
                             icon: icono,
                             title: 'Datos correctos',
-                            text: AX.mensaje
+                            text: AX.mensaje,
+                            didDestroy:()=>{
+                                window.location.href = "./PHP/trabajoTerminal.php";
+                            }
                           });
                         }
                     else if(AX.codigo == 2){
